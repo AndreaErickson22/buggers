@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: '/buggers-vue',
+  publicPath: '/buggers',
   outputDir: 'docs'
 }
