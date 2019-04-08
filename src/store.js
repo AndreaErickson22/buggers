@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import Axios from 'axios'
 
 var _sandboxApi = Axios.create({
-  baseURL: 'https://bcw-sandbox.herokuapp.com/api/Andreas',
+  baseURL: 'https://bcw-sandbox.herokuapp.com/api/Andreas2',
   timeout: 3000,
 
 })

@@ -16,11 +16,13 @@
           </thead>
           <!-- //below is a tricky ternary look at this later!! -->
           <tbody v-for="bug in bugs" :key="bug.id">
-            <tr class="table-success" :class="[bug.closed ?'table-warning':'']">
+            <tr class="table-success" :class="bug.closed ?'table-warning':''">
               <!-- below is making space correct -->
               <th scope="row">{{bug.num}}</th>
               <td @click="setActiveBug(bug); $router.push({name: 'details', params:{id: bug._id}})">
-                <button class="COMMENT btn-success">Comment</button>
+                <button class="COMMENT btn-success" v-if="!bug.closed">Comment</button>
+
+                <!-- </div> -->
               </td>
               <td>{{bug.title}}</td>
               <td>{{bug.description}}</td>
